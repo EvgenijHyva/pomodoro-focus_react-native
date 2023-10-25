@@ -11,7 +11,7 @@ export const FocusHistory = ({ history, repeatSubj, clearHistory }) => {
     const { subject, time } = item;
     return(
       <Text style={styles.item} onPress={() => repeatSubj(subject)}> 
-       - {subject.charAt(0).toUpperCase() + subject.slice(1)}. Done at <i>{format(time, 'dd-MM-yyyy HH:mm:ss')}</i>
+       - {subject.charAt(0).toUpperCase() + subject.slice(1)}. Done at {format(time, 'dd-MM-yyyy HH:mm:ss').toString()}
       </Text>
     );
   }
